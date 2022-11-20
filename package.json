@@ -18,6 +18,8 @@
     "react-dom": "^18.2.0",
     "react-i18next": "^12.0.0",
     "react-redux": "^8.0.5",
+    "react-router": "^5.2.1",
+    "react-router-dom": "^5.3.0",
     "react-scripts": "5.0.1",
     "redux": "^4.2.0",
     "redux-persist": "^6.0.0",
@@ -31,7 +33,7 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "craco eject",
-    "lint": "eslint . --ext .ts"
+    "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx . --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -53,6 +55,8 @@
   },
   "devDependencies": {
     "@craco/craco": "^7.0.0",
+    "@types/react-router": "^5.1.19",
+    "@types/react-router-dom": "^5.3.3",
     "@types/styled-components": "^5.1.26",
     "@typescript-eslint/eslint-plugin": "^4.23.0",
     "@typescript-eslint/parser": "^4.23.0",
