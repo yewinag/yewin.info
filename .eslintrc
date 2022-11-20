@@ -1,24 +1,13 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "react",
-    "@typescript-eslint",
-    "simple-import-sort",
-    "import",
-    "testing-library",
-    "jest-dom"
-  ],
+  "plugins": ["@typescript-eslint", "simple-import-sort"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
-    "plugin:react/recommended",
-    "plugin:jsx-a11y/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:jest/recommended",
-    "plugin:testing-library/react"
+    "plugin:jsx-a11y/recommended"
   ],
   "rules": {
     "semi": 2,
