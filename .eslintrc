@@ -1,0 +1,41 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "simple-import-sort",
+    "import",
+    "testing-library",
+    "jest-dom"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jest/recommended",
+    "plugin:testing-library/react"
+  ],
+  "rules": {
+    "semi": 2,
+    "no-console": 1,
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/ban-ts-comment": 0,
+    "@typescript-eslint/no-var-requires": 0,
+    "@typescript-eslint/no-this-alias": 0,
+    "require-await": 2,
+    "no-await-in-loop": 2,
+    "no-empty": [2, { "allowEmptyCatch": true }],
+    "prefer-const": 1,
+    "eqeqeq": 2,
+    "no-empty-function": 2,
+    "no-self-compare": 2,
+    "prettier/prettier": 0,
+    "no-undef": 0
+  }
+}
