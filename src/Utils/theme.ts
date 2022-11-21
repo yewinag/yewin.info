@@ -12,7 +12,7 @@ export const theme = {
         normal: "#919191",
         background: "#f7f7f9",
         dark: "rgb(51,51,51)",
-        text: "#000000",
+        text: "#666666",
         textSecondary: "rgba(145, 145, 145)",
         borderBase: "hsv(0, 0, 85%)",
         borderSplit: "rgba(0, 0, 0, 0.05)",
@@ -43,10 +43,10 @@ export const theme = {
         breakTablet: "767px",
     },
     widths: {
-        wide_650: "650px",
-        wide_700: "700px",
-        wide_900: "900px",
-        wide_1110: "1110px",
+        width_650: "650px",
+        width_48: "48rem",
+        width_900: "900px",
+        width_1110: "1110px",
     },
     family: {
         font: `"Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif,
@@ -64,5 +64,8 @@ export const theme = {
     card: {
         paddingBase: "16px",
         paddingWider: "16px",
+    },
+    space: {
+        rem_2: "2rem",
     },
 };

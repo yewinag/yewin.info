@@ -1,6 +1,6 @@
 import { PageAbout, PageBlog, PageError404, PageHome, PageLogin, PageSignup } from "@pages";
 import { IRoute } from "@interfaces";
-import { LayoutError } from "@layouts";
+import { AppLayout, LayoutError } from "@layouts";
 export const PATH_HOME = "/";
 export const PATH_LOGIN = "/Login";
 export const PATH_404 = "/*";
@@ -11,7 +11,7 @@ export const PATH_BLOG = "/blog";
 
 export const routes: Array<IRoute> = [
     //home
-    { path: PATH_HOME, component: PageHome, exact: true },
+    { path: PATH_HOME, component: PageHome, exact: true, layout: AppLayout },
     { path: PATH_ABOUT, component: PageAbout, exact: true },
     { path: PATH_BLOG, component: PageBlog, exact: true },
     { path: PATH_LOGIN, component: PageLogin, exact: true },
