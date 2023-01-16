@@ -1,14 +1,14 @@
-import { Route, useLocation } from "react-router";
+import { Route } from "react-router";
 
 import { IRoute } from "@interfaces";
 import { AppLayout } from "@layouts";
-import { authRoutes, publicRoutes } from "@configs";
+// import { authRoutes, publicRoutes } from "@configs";
 
 export const ComponentAppRoute = (props: IRoute) => {
     //page props
     const { path, exact } = props;
     //page hook
-    const { pathname } = useLocation();
+
     //WHAT: check user login
     const Component = props.component;
     const Layout = AppLayout;

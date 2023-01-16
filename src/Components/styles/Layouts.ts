@@ -8,6 +8,7 @@ export const StyledSection = styled.section`
     border-bottom-color: hsl(57, 6%, 90.7%);
     box-shadow: 0 0 10px 0 rgb(0 0 0 / 4%);
     top: 0;
+    background: #fff;
 `;
 export const StyledContainer = styled.div`
     max-width: ${(p) => p.theme.widths.width_48};

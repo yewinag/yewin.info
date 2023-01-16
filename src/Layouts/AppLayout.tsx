@@ -1,6 +1,5 @@
-import { StyledContainer } from "@components";
+import { StyledContainer, StyledMain } from "@components";
 import { ILayout } from "@interfaces";
-import styled from "styled-components";
 export const AppLayout = (props: ILayout) => {
     return (
         <StyledMain>
@@ -8,8 +7,3 @@ export const AppLayout = (props: ILayout) => {
         </StyledMain>
     );
 };
-const StyledMain = styled.main`
-    background: #f9f9f8;
-    margin-top: 66px;
-    min-height: 94vh;
-`;
