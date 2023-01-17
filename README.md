@@ -45,3 +45,9 @@ width height 52 \* 52
 #### input
 
 #### buttons
+
+#### testing
+
+```
+yarn add --dev jest @types/jest ts-jest
+```
