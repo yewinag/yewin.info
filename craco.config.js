@@ -13,6 +13,7 @@ module.exports = {
             "@configs": path.resolve(__dirname, "./src/Configs"),
             "@modules": path.resolve(__dirname, "./src/Modules"),
             "@utils": path.resolve(__dirname, "./src/Utils"),
+            "@hooks": path.resolve(__dirname, "./src/Hooks"),
             "@translations": path.resolve(__dirname, "./src/Translations"),
             //   "@validations": path.resolve(__dirname, "./src/Validations"),
         },
@@ -22,6 +23,8 @@ module.exports = {
             moduleNameMapper: {
                 "^@components(.*)$": "<rootDir>/src/Components$1",
                 "^@utils(.*)$": "<rootDir>/src/Utils",
+                "^@layouts(.*)$": "<rootDir>/src/Layouts",
+                "^@redux(.*)$": "<rootDir>/src/Redux",
             },
             roots: ["<rootDir>/src/", "<rootDir>/tests/"],
             testMatch: ["<rootDir>/tests/**/?(*.)+(spec|test).[jt]s?(x)"],
