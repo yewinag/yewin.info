@@ -6,18 +6,18 @@ import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 
 import reducer, { RootState } from "./Slices";
 
-// const persistConfig = {
-//     key: "root",
-//     storage,
-//     whitelist: ["theme", "auth", "merchant", "configClient", "page"],
-//     blackList: ["app"],
-// };
+const persistConfig = {
+    key: "root",
+    storage,
+    whitelist: ["theme", "auth", "merchant", "configClient", "page"],
+    blackList: ["app"],
+};
 
-// const persistedReducer = persistReducer(persistConfig, reducer);
+const persistedReducer = persistReducer(persistConfig, reducer);
 
 const store = configureStore({
-    reducer: reducer,
-    // middleware: [thunk],
+    reducer: persistedReducer,
+    middleware: [thunk],
 });
 
 export const persistor = persistStore(store);

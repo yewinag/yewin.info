@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const Footer = () => {
     const { t } = useTranslation();
     return (
-        <StyledFooter>
+        <div>
             <p>{t("page.contact")}</p>
             <ul>
                 <ol>twitter</ol>
@@ -13,25 +13,6 @@ export const Footer = () => {
                 <ol>youtube</ol>
             </ul>
             <p>{t("page.privacy")}</p>
-        </StyledFooter>
+        </div>
     );
 };
-
-const StyledFooter = styled.footer`
-    max-width: ${(p) => p.theme.widths.width_48};
-    margin: auto;
-    padding: 0 ${(p) => p.theme.space.rem_2};
-    min-height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    ul {
-        padding: 0;
-        margin: 0;
-        display: inline;
-        ol {
-            display: inline-block;
-            padding: 0;
-        }
-    }
-`;
