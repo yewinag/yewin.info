@@ -1,9 +1,12 @@
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import { PageHome } from "./Home";
+import { Provider } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { theme } from "@utils";
-import { Provider } from "react-redux";
 import { store } from "@redux";
+
+import { render } from "./test-utils";
 
 jest.mock("react-i18next", () => ({
     useTranslation: () => {
@@ -15,15 +18,14 @@ jest.mock("react-i18next", () => ({
         };
     },
 }));
-
 test("should first", async () => {
-    render(
-        <Provider store={store}>
-            <ThemeProvider theme={theme}>
-                <PageHome />
-            </ThemeProvider>
-        </Provider>
-    );
+    render(<PageHome />, {
+        initialState: {
+            auth: {
+                auth: true,
+            },
+        },
+    });
     const heading = screen.queryByText("page.person_name");
     const p = screen.queryByText("page.person_desc");
     await expect(heading).toBeInTheDocument();

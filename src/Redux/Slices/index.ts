@@ -1,10 +1,9 @@
 import { combineReducers } from "redux";
 import { AnyAction, Reducer } from "@reduxjs/toolkit";
-import appReducer from "./app";
-export * from "./app";
+import authReducer from "./auth";
 
 const productReducer = combineReducers({
-    app: appReducer,
+    auth: authReducer,
 });
 
 export type RootState = ReturnType<typeof productReducer>;

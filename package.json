@@ -34,7 +34,7 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "test": "craco test --coverage",
+    "test": "craco test",
     "eject": "craco eject",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx . --fix"
   },
