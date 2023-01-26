@@ -1,71 +1,45 @@
-export const theme = {
+import { extendTheme } from "@chakra-ui/react";
+
+export const theme = extendTheme({
+    fonts: {
+        body: "Inter, system-ui, sans-serif",
+        heading: "Work Sans, system-ui, sans-serif",
+    },
     colors: {
-        main: "#f4394f",
-        primary: "#007bff",
-        info: "#1890ff",
-        success: "#52c41a",
-        green: "#05C755",
-        processing: "#1890ff",
-        error: "#f5222d",
-        highlight: "#f5222d",
-        warning: "#faad14",
-        normal: "#919191",
-        background: "#f7f7f9",
-        dark: "rgb(51,51,51)",
-        text: "#666666",
-        textSecondary: "rgba(145, 145, 145)",
-        borderBase: "hsv(0, 0, 85%)",
-        borderSplit: "rgba(0, 0, 0, 0.05)",
-        red: "red",
+        discord: "#7289da",
     },
-    fontSizes: {
-        xs: "0.75rem", //12px
-        sm: "0.875rem",
-        md: "1rem",
-        lg: "1.125rem",
-        xl: "1.25rem",
-        xxl: "1.5rem",
+    shadows: {
+        largeSoft: "rgba(60, 64, 67, 0.15) 0px 2px 10px 6px;",
     },
-    heights: {
-        input: "48px",
-        button: "49px",
+    styles: {
+        global: {
+            "html, #__next": {
+                height: "100%",
+            },
+            "#__next": {
+                display: "flex",
+                flexDirection: "column",
+            },
+            ".body": {
+                // todo check how to do this without breaking the site
+                // height: '100%', // Push footer to bottom
+                overflowY: "scroll", // Always show scrollbar to avoid flickering
+            },
+            html: {
+                scrollBehavior: "smooth",
+            },
+            "#nprogress": {
+                pointerEvents: "none",
+            },
+            "#nprogress .bar": {
+                background: "green.200",
+                position: "fixed",
+                zIndex: "1031",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "2px",
+            },
+        },
     },
-    borderRadius: {
-        base: "4px",
-        sm: "4px",
-    },
-    breakPoints: {
-        breakSmall: "320px",
-        breakMobile: "375px",
-        breakMobileLarge: "414px",
-        breakMobileMax: "480px",
-        breakMobileMedium: "575px",
-        breakTablet: "767px",
-    },
-    widths: {
-        width_650: "650px",
-        width_48: "48rem",
-        width_900: "900px",
-        width_1110: "1110px",
-    },
-    family: {
-        font: `"Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif,
-        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
-        code: `"Anonymous Pro", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace`,
-    },
-    menu: {
-        inlineTopLevelItemHeight: "36px",
-        itemHeight: "36px",
-    },
-    header: {
-        background: "#ffffff",
-        height: "60px",
-    },
-    card: {
-        paddingBase: "16px",
-        paddingWider: "16px",
-    },
-    space: {
-        rem_2: "2rem",
-    },
-};
+});
